@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: express-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: express-backend
   template:
     metadata:
       labels:
-        app: backend
+        app: express-backend
     spec:
       containers:
-      - name: backend
-        image: express-backend
+      - name: new-flask-container
+        image: docker.io/sk65/express-backend:latest
         ports:
         - containerPort: 3000
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Service
 metadata:
@@ -9,3 +10,18 @@ spec:
   - port: 3000
     targetPort: 3000
   type: ClusterIP
+=======
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-backend
+spec:
+  type: NodePort
+  selector:
+    app: express-backend
+  ports:
+    - port: 80
+      targetPort: 3000
+      nodePort: 31882  # Must be between 30000-32767
+
+>>>>>>> 339a0d8 (update html form)

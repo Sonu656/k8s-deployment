@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Flask Frontend</title>
+</head>
 <body>
 
 <h2>HTML Forms</h2>
 <p> Hi This is devops page</p>
-<p>Today is a {{ day_of_week }} </p>
-<p>The  {{ day_of_week }} </p>
+<p>Message from backend: {{ backend_message }}</p>
 
 <form action="/submit" method="POST">
   <label for="name">Name:</label><br>
